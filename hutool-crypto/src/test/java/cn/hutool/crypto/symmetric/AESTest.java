@@ -1,6 +1,9 @@
 package cn.hutool.crypto.symmetric;
 
+import cn.hutool.core.codec.Base16Codec;
+
 import cn.hutool.core.codec.Base64;
+import cn.hutool.core.util.CharsetUtil;
 import cn.hutool.core.util.HexUtil;
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.crypto.KeyUtil;
@@ -108,7 +111,6 @@ public class AESTest {
 		String content = "12sdfsdfs你好啊！";
 		AES aes = new AES(secretKey);
 		final String result1 = aes.encryptBase64(content);
-
 		final String decryptStr = aes.decryptStr(result1);
 		Assert.assertEquals(content, decryptStr);
 	}

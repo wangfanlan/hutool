@@ -9,7 +9,7 @@
 			<pattern>${format}</pattern>
 		</encoder>
 	</appender>
-	
+
 	<root level="debug">
 		<appender-ref ref="STDOUT" />
 	</root>
